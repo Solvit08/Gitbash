@@ -1,0 +1,153 @@
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning (main)
+$ pwd
+/d/Learning
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning (main)
+$ mkdir Lesson_1
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning (main)
+$ cd Lesson_1
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ mkdir dir_1 dir_2 dir_3
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ cd dir_1
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1/dir_1 (main)
+$ touch file{1..3}.txt jfile{1..2}.json
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1/dir_1 (main)
+$ mkdir dir_11 dir_12 dir_13
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1/dir_1 (main)
+$ ls -la
+total 4
+drwxr-xr-x 1 solvi 197609 0 Apr 20 11:45 ./
+drwxr-xr-x 1 solvi 197609 0 Apr 20 11:38 ../
+drwxr-xr-x 1 solvi 197609 0 Apr 20 11:45 dir_11/
+drwxr-xr-x 1 solvi 197609 0 Apr 20 11:45 dir_12/
+drwxr-xr-x 1 solvi 197609 0 Apr 20 11:45 dir_13/
+-rw-r--r-- 1 solvi 197609 0 Apr 20 11:43 file1.txt
+-rw-r--r-- 1 solvi 197609 0 Apr 20 11:43 file2.txt
+-rw-r--r-- 1 solvi 197609 0 Apr 20 11:43 file3.txt
+-rw-r--r-- 1 solvi 197609 0 Apr 20 11:43 jfile1.json
+-rw-r--r-- 1 solvi 197609 0 Apr 20 11:43 jfile2.json
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1/dir_1 (main)
+$ vim file1.txt
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1/dir_1 (main)
+$ cat file1.txt
+Have a nice day!
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1/dir_1 (main)
+$ cd ..
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ mv dir_1/file1.txt dir_1/file2.txt /d/Learning/Lesson_1/dir_2
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ cp dir_1/jfile1.json dir_1/jfile2.json /d/Learning/Lesson_1/dir_2
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ find -name file1.txt
+./dir_2/file1.txt
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ tail -f dir_2/file1.txt
+Have a nice day!
+
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ cat >dir_2/file2.txt
+111
+222
+333
+444
+555
+666
+777
+888
+999
+000
+
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ head -3 dir_2/file2.txt
+111
+222
+333
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ tail -4 dir_2/file2.txt
+777
+888
+999
+000
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ less dir_2/file2.txt
+
+[1]+  Stopped                 less dir_2/file2.txt
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ date
+Thu Apr 20 11:58:26 RTZ 2023
+
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ curl -v http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 162.55.220.72:5005...
+* Connected to 162.55.220.72 (162.55.220.72) port 5005 (#0)
+> GET /terminal-hw-request HTTP/1.1
+> Host: 162.55.220.72:5005
+> User-Agent: curl/7.88.1
+> Accept: */*
+>
+* HTTP 1.0, assume close after body
+< HTTP/1.0 404 NOT FOUND
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 232
+< Server: Werkzeug/2.0.1 Python/3.8.10
+< Date: Thu, 20 Apr 2023 09:14:13 GMT
+<
+{ [232 bytes data]
+100   232  100   232    0     0   2028      0 --:--:-- --:--:-- --:--:--  2035<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+* Closing connection 0
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ cat >my_script
+#!/bin/bash
+cd dir_3
+mkdir dir_31 dir_32 dir_33
+cd dir_31
+touch f{1..3}.txt jf{1..2}.json
+mkdir dir1 dir2 dir3
+ls -la
+mv f1.txt f2.txt dir1
+
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$ ./my_script
+total 4
+drwxr-xr-x 1 solvi 197609 0 Apr 20 12:21 .
+drwxr-xr-x 1 solvi 197609 0 Apr 20 12:21 ..
+drwxr-xr-x 1 solvi 197609 0 Apr 20 12:21 dir1
+drwxr-xr-x 1 solvi 197609 0 Apr 20 12:21 dir2
+drwxr-xr-x 1 solvi 197609 0 Apr 20 12:21 dir3
+-rw-r--r-- 1 solvi 197609 0 Apr 20 12:21 f1.txt
+-rw-r--r-- 1 solvi 197609 0 Apr 20 12:21 f2.txt
+-rw-r--r-- 1 solvi 197609 0 Apr 20 12:21 f3.txt
+-rw-r--r-- 1 solvi 197609 0 Apr 20 12:21 jf1.json
+-rw-r--r-- 1 solvi 197609 0 Apr 20 12:21 jf2.json
+
+solvi@DESKTOP-HOQKM8U MINGW64 /d/Learning/Lesson_1 (main)
+$
